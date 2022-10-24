@@ -20,3 +20,32 @@ function submit(){
         document.getElementById('mailVerification').innerHTML = `<p>L'indirizzo e-mail non è presente</p>` 
     }
 }
+
+
+function diceButton(){
+
+    userDie = Math.round(Math.random() * 5) + 1;
+    cpuDie = Math.round(Math.random() * 5) + 1;
+
+    if(userDie > cpuDie){
+        console.log('hai vinto')
+        console.log(`${userDie} ${cpuDie}`)
+        document.getElementById('userDie').innerHTML = `Il risultato del tuo dado è ${userDie}` 
+        document.getElementById('cpuDie').innerHTML = `Il risultato del dado avversario è ${cpuDie}`
+        document.getElementById('gameResult').innerHTML = `Hai vinto!`
+    }else if(userDie < cpuDie){
+        console.log('hai perso')
+        console.log(`${userDie} ${cpuDie}`)
+        document.getElementById('userDie').innerHTML = `Il risultato del tuo dado è ${userDie}` 
+        document.getElementById('cpuDie').innerHTML = `Il risultato del dado avversario è ${cpuDie}`
+        document.getElementById('gameResult').innerHTML = `Hai perso`
+    }else{
+        console.log('pareggio')
+        console.log(`${userDie} ${cpuDie}`)
+        document.getElementById('userDie').innerHTML = `Il risultato del tuo dado è ${userDie}` 
+        document.getElementById('cpuDie').innerHTML = `Il risultato del dado avversario è ${cpuDie}`
+        document.getElementById('gameResult').innerHTML = `Hai pareggiato`
+    }
+        
+    
+}
