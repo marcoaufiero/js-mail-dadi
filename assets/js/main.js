@@ -15,8 +15,8 @@ function submit(){
     }
 
     if(mailCheck == true){
-        console.log('presente')
+        document.getElementById('mailVerification').innerHTML = `<p>L'indirizzo e-mail è presente</p>`  
     }else{
-        console.log('non è presente')
+        document.getElementById('mailVerification').innerHTML = `<p>L'indirizzo e-mail non è presente</p>` 
     }
 }
